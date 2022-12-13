@@ -1,0 +1,212 @@
+.hero {
+  font-family: "Raleway";
+  color: rgb(255, 255, 255);
+
+  width: 100vw;
+  height: 960px;
+
+  &__bg {
+    position: absolute;
+    background-image: url(../../img/hero-background.png);
+    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 960px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    &_gradient {
+      width: 100%;
+      height: 960px;
+      top: 0;
+      left: 0;
+      background: linear-gradient(
+        180deg,
+        #00a510 0%,
+        rgba(0, 165, 16, 0.78) 18.09%,
+        rgba(0, 165, 15, 0.58) 51.18%,
+        #13801d 85.09%,
+        #098214 100%
+      );
+      z-index: 1;
+    }
+  }
+  &__main {
+    padding-top: 280px;
+  }
+  &__info {
+    &_place {
+      font-weight: 900;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #f8d548;
+      text-align: end;
+      @media screen and(max-width:1399px) {
+        text-align: start;
+        margin-left: 200px;
+        
+      }
+    }
+    &_title {
+      font-weight: 800;
+      font-size: 72px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    &_opened {
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 1.5;
+      margin-bottom: 4px;
+    }
+    &_adress {
+      font-family: "Comfortaa";
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.2;
+      margin-bottom: 48px;
+      @media screen and(max-width:1608px) {
+        margin-right: 50px;
+        
+      }
+    }
+    &_button {
+      cursor: pointer;
+      color: white;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.1;
+      padding: 14px 44px;
+      background: linear-gradient(90deg, #f46141 2.43%, #f29e2b 100%);
+
+      border-radius: 42px;
+      border: none;
+
+      &:hover {
+        font-weight: 900;
+      }
+      &.primary {
+        background: transparent;
+        border: 1px solid #ffffff;
+      }
+    }
+    &_slider {
+      margin-top: 70px;
+      a {
+        border-radius: 32px 56px 32px 64px;
+        text-decoration: none;
+        img {
+          max-width: 136px;
+          max-height: 136px;
+        }
+        p {
+          font-weight: 800;
+          font-size: 14px;
+          line-height: 64px;
+          text-align: center;
+          text-transform: uppercase;
+          color: #ffffff;
+        }
+      }
+    }
+    &_animals {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 70px;
+      background: rgba(18, 131, 28, 0.89);
+      border: 1px dashed rgba(255, 255, 255, 0.4);
+      border-radius: 32px 56px 32px 64px;
+      width: 136px;
+      height: 136px;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 14px;
+      line-height: 1.4;
+      text-decoration-line: underline;
+      text-transform: uppercase;
+    }
+  }
+  &__animals {
+    position: absolute;
+    right: 0;
+    top: 160px;
+    width: 788px;
+    height: 788px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #f36041 0%, #f1a02a 100%);
+    box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.15);
+    @media screen and(max-width:1608px) {
+      width: 700px;
+      height: 700px;
+      
+    }
+    @media screen and(max-width:1399px) {
+      top: 240px;
+      
+    }
+    .palms{
+      position: absolute;
+     
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      left: 0;
+      bottom: 5%;
+      mix-blend-mode: darken;
+opacity: 0.25;
+@media screen and(max-width:1608px) {
+  width: 600px;
+  height: 600px;
+  
+}
+    }
+    .giraffe {
+      position: absolute;
+      left: 35%;
+      bottom: -40px;
+      @media screen and(max-width:1608px) {
+        width: auto;
+        max-height: 820px;
+  
+      }
+    }
+    .wolf{
+      position: absolute;
+      left: -10%;
+      bottom: 0;
+    }
+    .tiger{
+      position: absolute;
+      left: 8%;
+      bottom: -8%;
+    }
+    .griffon{
+      position: absolute;
+      left: -7%;
+      top: 0px;
+      @media screen and(max-width:1608px) {
+        max-width: 300px;
+        height: auto;
+        top: 20px;
+      }
+    }
+    .lion{
+       position: absolute;
+      left: 5%;
+      bottom: -3%;
+    }
+     .monkey-shadow{
+      position: absolute;
+      left: 50%;
+      top: 2%;
+     } 
+    
+    .monkey{
+        position: absolute;
+      left: 46%;
+      top: 0;
+    }
+  }
+}
