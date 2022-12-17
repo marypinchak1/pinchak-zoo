@@ -16,83 +16,68 @@
   </head>
 
   <body>
-    @@include("components/_header.html")
-    <section class="hero">
-      <div class="hero__bg">
-        <div class="hero__bg_gradient"></div>
-      </div>
-      <div class="hero__main">
-        <div class="container">
-          <div class="row">
-            <div class="col-6 hero__info p-0">
-              <div class="hero__info_place">Меденичі</div>
-              <div class="hero__info_title">Зоопарк Лімпопо</div>
-              <div class="hero__info_opened">Відчинено 10:00 - 17:00</div>
-              <div class="hero__info_adress">
-                Львівська обл., Дрогобицький р-н, с. Меденичі, вул. Львівська
-                21,
-              </div>
-              <div class="d-flex gap-4">
-                <button class="hero__info_button primary">Як доїхати</button>
-                <button class="hero__info_button">Квитки</button>
-              </div>
-              <div class="col-12 d-flex">
-                <div class="hero__info_slider col-9">
-                  <a
-                    href="#"
-                    class="hero__info_slider_item d-flex flex-column justify-content-center"
-                  >
-                    <img src="img/raccoon.png" alt="raccoon" />
-                    <p>єнот полоскун</p>
-                  </a>
-                  <a
-                    href="#"
-                    class="hero__info_slider_item d-flex flex-column justify-content-center"
-                  >
-                    <img src="img/raccoon.png" alt="raccoon" />
-                    <p>єнот полоскун</p>
-                  </a>
-                  <a
-                    href="#"
-                    class="hero__info_slider_item d-flex flex-column justify-content-center"
-                  >
-                    <img src="img/raccoon.png" alt="raccoon" />
-                    <p>єнот полоскун</p>
-                  </a>
-                  <a
-                    href="#"
-                    class="hero__info_slider_item d-flex flex-column justify-content-center"
-                  >
-                    <img src="img/raccoon.png" alt="raccoon" />
-                    <p>єнот полоскун</p>
-                  </a>
-                  <a
-                    href="#"
-                    class="hero__info_slider_item d-flex flex-column text-align-center"
-                  >
-                    <img src="img/raccoon.png" alt="raccoon" />
-                    <p>єнот полоскун</p>
-                  </a>
+    @@include("components/_header.html") @@include("pages/main.html")
+
+    <section class="animals">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p class="animals__title">Тварини</p>
+            <div class="animals__nav">
+              <div class="d-flex justify-content-between">
+                <div class="animals__nav_tabs d-sm-flex">
+                  <div class="item active">Усі</div>
+                  <div id="tab-1" class="item" data-tabs="1">Хижаки</div>
+                  <div id="tab-2" class="item" data-tabs="2">Всеїдні</div>
+                  <div id="tab-3" class="item" data-tabs="3">Інші</div>
                 </div>
-                <a class="col-3 hero__info_animals" href="#"> Всі тварини </a>
+                <a href="#"
+                  >Всі тварини списком<img
+                    src="img/section-right-arrow 1.svg"
+                    alt=""
+                /></a>
               </div>
-            </div>
-            <div class="col-6 hero__animals">
-              <img class="palms" src="img/palms.svg" alt="">
-              <img class="giraffe" src="img/hero_lama.png" alt="" />
-              <img class="wolf" src="img/hero_wolf.png" alt="" />
-              <img class="tiger" src="img/hero_tiger.png" alt="" />
-              <img class="lion" src="img/hero_lion.png" alt="" />
-            <img class="griffon" src="img/hero_griffon.png" alt="griff">
-            <img class="monkey-shadow" src="img/monkey-shadow.svg" alt="">
-            <img class="monkey" src="img/hero_monkey.png" alt="">
             </div>
           </div>
         </div>
       </div>
+      <div class="content__tabs">
+        <div class="content" data-tabs="1">
+          <img src="img/binturong.png" alt="Бінтуронг" />
+          <p class="content__title mb-2">Бінтуронг</p>
+        </div>
+        <div class="content" data-tabs="1">
+          <img src="img/raccoon.png" alt="raccoon" />
+          <p class="content__title mb-2">єнот полоскун</p>
+        </div>
+        <div class="content" data-tabs="1">
+          <img src="img/lion.png" alt="lion" />
+          <p class="content__title mb-2">Білий лев</p>
+        </div>
+        <div class="content" data-tabs="1">
+          <img src="img/mandrill.jpeg" alt="mandrill" />
+          <p class="content__title mb-2">Мандрил</p>
+        </div>
+        <div class="content" data-tabs="1">
+          <img src="img/binturong.png" alt="Бінтуронг" />
+          <p class="content__title mb-2">Бінтуронг</p>
+        </div>
+        <div class="content" data-tabs="1">
+          <img src="img/raccoon.png" alt="raccoon" />
+          <p class="content__title mb-2">єнот полоскун</p>
+        </div>
+        <div class="content" data-tabs="1">
+          <img src="img/lion.png" alt="lion" />
+          <p class="content__title mb-2">Білий лев</p>
+        </div>
+        <div class="content" data-tabs="1">
+          <img src="img/mandrill.jpeg" alt="mandrill" />
+          <p class="content__title mb-2">Мандрил</p>
+        </div>
+      </div>
     </section>
-    @@include("pages/main.html") @@include("components/_footer.html")
-    @@include("icons/_icons.html")
+
+    @@include("components/_footer.html") @@include("icons/_icons.html")
 
     <script
       src="https://code.jquery.com/jquery-2.2.4.min.js"
