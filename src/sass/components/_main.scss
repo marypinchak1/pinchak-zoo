@@ -21,7 +21,7 @@ body {
     background-image: url(../../img/section-branch.svg);
     width: 100%;
     height: 186px;
-    top: 1570px;
+    top: 1600px;
     left: 0;
   }
   &__text {
@@ -45,7 +45,7 @@ body {
       opacity: 0.2;
     }
     &_limpopo-secondary {
-      top: 2238px;
+      top: 2400px;
       left: 10%;
       font-size: 160px;
     }
@@ -308,7 +308,7 @@ body {
   font-family: "Raleway";
   color: #ffffff;
   background: #0b7d16;
-  padding-bottom: 100px;
+  padding-bottom: 120px;
   &__title {
     font-weight: 800;
     font-size: 72px;
@@ -388,12 +388,13 @@ body {
     flex-direction: column;
     text-align: center;
     justify-content: center;
-   
     padding: 20px;
+
     img {
       border-radius: 48px 96px;
       margin: 0 0 26px 0;
-
+      max-height: 260px;
+      max-width: auto;
     }
     &__title {
       font-weight: 800;
@@ -403,4 +404,44 @@ body {
       color: #ffffff;
     }
   }
+}
+.map {
+  background: #0b7d16;
+  font-family: "Raleway";
+  color: #ffffff;
+  position: relative;
+  &__title {
+    font-weight: 800;
+    font-size: 72px;
+    padding-bottom: 90px;
+  }
+  &__img {
+    padding-bottom: 100px;
+    &_globe {
+      opacity: 0.1;
+    }
+    &_shadow {
+      position: absolute;
+      top: 250px;
+    }
+    &_map {
+      position: absolute;
+    }
+    &_cloud-up {
+      position: absolute;
+      left: 0;
+      z-index: 1;
+    }
+    &_cloud-down {
+      position: absolute;
+      right: 0;
+      bottom: 100px;
+      z-index: 1;
+    }
+  }
+}
+.news{
+  background: #0b7d16;
+  font-family: "Raleway";
+  color: #ffffff;
 }

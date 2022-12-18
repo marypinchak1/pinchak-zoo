@@ -11,7 +11,7 @@ let slider = $(document).ready(function () {
   });
   $(".content__tabs").slick({
     centerMode: true,
-  
+ 
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: true,
