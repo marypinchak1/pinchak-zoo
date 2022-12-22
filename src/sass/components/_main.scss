@@ -25,6 +25,7 @@ body {
     left: 0;
   }
   &__text {
+    display: none;
     position: absolute;
     display: flex;
     white-space: nowrap;
@@ -34,17 +35,20 @@ body {
     color: transparent;
     -webkit-text-stroke: 1px white;
     &_zoo {
+      display: none;
       left: 5%;
       top: 110px;
       font-size: 200px;
     }
     &_limpopo {
+      display: none;
       top: 900px;
       left: 10%;
       font-size: 160px;
       opacity: 0.2;
     }
     &_limpopo-secondary {
+      display: none;
       top: 2400px;
       left: 10%;
       font-size: 160px;
@@ -440,8 +444,58 @@ body {
     }
   }
 }
-.news{
+.news {
   background: #0b7d16;
   font-family: "Raleway";
   color: #ffffff;
+  padding-bottom: 120px;
+  &__title {
+    font-weight: 800;
+    font-size: 72px;
+  }
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+
+    img {
+      border-radius: 48px 96px;
+      margin: 0 0 26px 0;
+      max-height: 260px;
+      max-width: auto;
+    }
+    p {
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 2;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+  }
+  .slick-arrow.control-c {
+    position: absolute;
+
+    bottom: -100px;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .arrow-prev.control-c {
+    right: 140px;
+    opacity: 0.3;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .arrow-next.control-c {
+    right: 40px;
+    opacity: 0.3;
+    &:hover {
+      opacity: 1;
+    }
+  }
 }

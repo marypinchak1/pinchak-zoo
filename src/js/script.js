@@ -11,7 +11,7 @@ let slider = $(document).ready(function () {
   });
   $(".content__tabs").slick({
     centerMode: true,
- 
+ focusOnSelect: true,
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: true,
@@ -40,7 +40,24 @@ let slider = $(document).ready(function () {
       },
     ],
   });
+  $(".news__slider").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    focusOnSelect: true,
+    arrows: true,
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 2500,
+
+    prevArrow:
+      "<img class='a-left control-c prev arrow-prev' src='../img/white-arrow-left.svg'>",
+    nextArrow:
+      "<img class='a-right control-c next arrow-next' src='../img/white-arrow-right.svg'>",
+  });
 });
+
 
 $(".item").on("click", function () {
   $(".item").removeClass("active");
@@ -50,6 +67,8 @@ $(".item").on("click", function () {
   $(".content[data-tabs = " + tabs + "]").removeClass("d-none");
   $(".content[data-tabs = " + tabs + "]").addClass("d-block");
 });
+
+
 
 function parallax(){ 
   var windowPosition = $(window).scrollTop();
