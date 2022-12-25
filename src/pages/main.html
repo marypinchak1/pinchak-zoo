@@ -2,10 +2,32 @@
   <div class="bg">
     <div class="bg__img bg__img_hero"></div>
     <div class="bg__img bg__img_branch"></div>
-    <div class="bg__text bg__text_zoo">зоопарк зоопарк зоопарк</div>
-    <div class="bg__text bg__text_limpopo">лімпопо лімпопо лімпопо лімпопо</div>
-    <div class="bg__text bg__text_limpopo">лімпопо лімпопо лімпопо лімпопо</div>
-    <div class="bg__text bg__text_limpopo-secondary">
+    <div
+      class="bg__text bg__text_zoo rellax"
+      data-rellax-speed="-6"
+      style="transform: translate3d(0px, 0px, 0px)"
+    >
+      зоопарк зоопарк зоопарк
+    </div>
+    <div
+      class="bg__text bg__text_limpopo rellax"
+      data-rellax-speed="-1"
+      style="transform: translate3d(0px, 307px, 0px)"
+    >
+      лімпопо лімпопо лімпопо лімпопо
+    </div>
+    <div
+      class="bg__text bg__text_limpopo rellax"
+      data-rellax-speed="-1"
+      style="transform: translate3d(0px, 0px, 0px)"
+    >
+      лімпопо лімпопо лімпопо лімпопо
+    </div>
+    <div
+      class="bg__text bg__text_limpopo-secondary rellax"
+      data-rellax-speed="-1"
+      style="transform: translate3d(0px, 0px, 0px)"
+    >
       лімпопо лімпопо лімпопо лімпопо
     </div>
   </div>
@@ -31,22 +53,22 @@
                   href="#"
                   class="hero__info_slider_item d-flex flex-column justify-content-center"
                 >
-                  <img src="img/raccoon.png" alt="raccoon" />
-                  <p>єнот полоскун</p>
+                  <img src="img/mandrill.jpeg" alt="mandrill" />
+                  <p>мандрил</p>
                 </a>
                 <a
                   href="#"
                   class="hero__info_slider_item d-flex flex-column justify-content-center"
                 >
-                  <img src="img/binturong.png" alt="raccoon" />
+                  <img src="img/meerkats.jpeg" alt="meerkats" />
                   <p>бінтуронг</p>
                 </a>
                 <a
                   href="#"
                   class="hero__info_slider_item d-flex flex-column justify-content-center"
                 >
-                  <img src="img/lion.png" alt="lion" />
-                  <p>білий лев</p>
+                  <img src="img/ussurian_tiger.jpeg" alt="tiger" />
+                  <p>тигр</p>
                 </a>
                 <a
                   href="#"
@@ -57,10 +79,17 @@
                 </a>
                 <a
                   href="#"
-                  class="hero__info_slider_item d-flex flex-column text-align-center"
+                  class="hero__info_slider_item d-flex flex-column justify-content-center"
                 >
-                  <img src="img/meerkats.jpeg" alt="raccoon" />
-                  <p>сурикат</p>
+                  <img src="img/meerkats.jpeg" alt="meerkats" />
+                  <p>бінтуронг</p>
+                </a>
+                <a
+                  href="#"
+                  class="hero__info_slider_item d-flex flex-column justify-content-center"
+                >
+                  <img src="img/ussurian_tiger.jpeg" alt="tiger" />
+                  <p>тигр</p>
                 </a>
               </div>
               <a class="col-3 hero__info_animals" href="#"> Всі тварини </a>
@@ -68,14 +97,18 @@
           </div>
 
           <div class="col-6 hero__animals">
-            <img class="palms" src="img/palms.svg" alt="" />
-            <img class="giraffe" src="img/hero_lama.png" alt="" />
-            <img class="wolf" src="img/hero_wolf.png" alt="" />
-            <img class="tiger" src="img/hero_tiger.png" alt="" />
-            <img class="lion" src="img/hero_lion.png" alt="" />
+            <img class="palms" src="img/palms.svg" alt="palms" />
+            <img class="giraffe" src="img/hero_lama.png" alt="lama" />
+            <img class="wolf" src="img/hero_wolf.png" alt="wolf" />
+            <img class="tiger" src="img/hero_tiger.png" alt="tiger" />
+            <img class="lion" src="img/hero_lion.png" alt="lion" />
             <img class="griffon" src="img/hero_griffon.png" alt="griff" />
-            <img class="monkey-shadow" src="img/monkey-shadow.svg" alt="" />
-            <img class="monkey" src="img/hero_monkey.png" alt="" />
+            <img
+              class="monkey-shadow"
+              src="img/monkey-shadow.svg"
+              alt="shadow"
+            />
+            <img class="monkey" src="img/hero_monkey.png" alt="monkey" />
           </div>
         </div>
       </div>
@@ -86,7 +119,6 @@
       <div class="row">
         <div class="col-12 d-flex flex-wrap">
           <div class="col-12 for-visitors__title">Відвідувачам</div>
-
           <a
             class="col-12 col-lg-6 for-visitors__item d-flex align-items-center mb-2"
             href="#"
@@ -94,7 +126,9 @@
             <div
               class="for-visitors__item_img d-flex justify-content-center align-items-center"
             >
-              <img src="img/lamp.svg" alt="" />
+              <svg style="width: 64px; height: 72px">
+                <use xlink:href="#lamp" />
+              </svg>
             </div>
             <div>
               <p class="for-visitors__item_title">Поради відвідувачам</p>
@@ -104,7 +138,6 @@
               </p>
             </div>
           </a>
-
           <a
             class="col-12 col-lg-6 for-visitors__item d-flex align-items-center mb-2"
             href="#"
@@ -112,7 +145,9 @@
             <div
               class="for-visitors__item_img d-flex justify-content-center align-items-center"
             >
-              <img src="img/rules.svg" alt="" />
+              <svg style="width: 84px; height: 84px">
+                <use xlink:href="#rules" />
+              </svg>
             </div>
             <div>
               <p class="for-visitors__item_title">
@@ -130,7 +165,9 @@
             <div
               class="for-visitors__item_img d-flex justify-content-center align-items-center"
             >
-              <img src="img/location.svg" alt="" />
+              <svg style="width: 48px; height: 64px">
+                <use xlink:href="#location" />
+              </svg>
             </div>
             <div>
               <p class="for-visitors__item_title">Карта зоопарку</p>
@@ -146,7 +183,9 @@
             <div
               class="for-visitors__item_img d-flex justify-content-center align-items-center"
             >
-              <img src="img/percents.svg" alt="" />
+              <svg style="width: 68px; height: 68px">
+                <use xlink:href="#percents" />
+              </svg>
             </div>
             <div>
               <p class="for-visitors__item_title">Діючі акції та знижки</p>
@@ -165,7 +204,7 @@
         <div class="col-12">
           <p class="animals__title">Тварини</p>
           <div class="animals__nav">
-            <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-between align-items-center">
               <div class="animals__nav_tabs d-sm-flex">
                 <div class="item active">Усі</div>
                 <div id="tab-1" class="item" data-tabs="1">Хижаки</div>
@@ -173,10 +212,11 @@
                 <div id="tab-3" class="item" data-tabs="3">Інші</div>
               </div>
               <a href="#"
-                >Всі тварини списком<img
-                  src="img/section-right-arrow 1.svg"
-                  alt=""
-              /></a>
+                >Всі тварини списком
+                <svg>
+                  <use xlink:href="#arrow-yellow" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
@@ -184,36 +224,24 @@
     </div>
     <div class="content__tabs">
       <div class="content" data-tabs="1">
-        <img src="img/binturong.png" alt="Бінтуронг" />
-        <p class="content__title mb-2">Бінтуронг</p>
-      </div>
-      <div class="content" data-tabs="1">
-        <img src="img/raccoon.png" alt="raccoon" />
-        <p class="content__title mb-2">єнот полоскун</p>
-      </div>
-      <div class="content" data-tabs="1">
-        <img src="img/lion.png" alt="lion" />
-        <p class="content__title mb-2">Білий лев</p>
+        <img src="img/jaguar.jpeg" alt="ягуар" />
+        <p class="content__title mb-2">Ягуар</p>
       </div>
       <div class="content" data-tabs="1">
         <img src="img/mandrill.jpeg" alt="mandrill" />
         <p class="content__title mb-2">Мандрил</p>
       </div>
       <div class="content" data-tabs="1">
-        <img src="img/binturong.png" alt="Бінтуронг" />
-        <p class="content__title mb-2">Бінтуронг</p>
+        <img src="img/meerkats.jpeg" alt="сурикати" />
+        <p class="content__title mb-2">Сурикати</p>
       </div>
       <div class="content" data-tabs="1">
-        <img src="img/raccoon.png" alt="raccoon" />
-        <p class="content__title mb-2">єнот полоскун</p>
+        <img src="img/serval.jpeg" alt="сервал" />
+        <p class="content__title mb-2">Сервал</p>
       </div>
       <div class="content" data-tabs="1">
-        <img src="img/lion.png" alt="lion" />
-        <p class="content__title mb-2">Білий лев</p>
-      </div>
-      <div class="content" data-tabs="1">
-        <img src="img/mandrill.jpeg" alt="mandrill" />
-        <p class="content__title mb-2">Мандрил</p>
+        <img src="img/pheasant.jpeg" alt="Фазан" />
+        <p class="content__title mb-2">Фазан</p>
       </div>
     </div>
   </section>
@@ -223,21 +251,53 @@
         <div class="col-12">
           <h2 class="map__title">Карта зоопарку</h2>
           <div class="map__img d-flex justify-content-center">
-            <img class="map__img_globe" src="img/globe.svg" alt="globe" />
+            <img class="map__img_globe" src="img/globe.png" alt="globe" />
             <img
               class="map__img_shadow"
               src="img/map_shadow.svg"
               alt="shadow"
             />
             <img class="map__img_map" src="img/map.svg" alt="map" />
-            <img class="map__img_cloud-up" src="img/cloud_up.svg" alt="cloud" />
+            <img class="map__img_cloud-up" src="img/cloud-up.png" alt="cloud" />
+
             <img
               class="map__img_cloud-down"
-              src="img/cloud_down.svg"
+              src="img/cloud_down.png"
               alt="cloud"
             />
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+  <section class="news">
+    <h1 class="news__title">Новини та події</h1>
+    <div>
+      <div class="news__slider">
+        <a href="#" class="d-flex flex-column justify-content-center">
+          <img src="img/news1.png" alt="news" />
+          <p>Учні 2-3 класів Розвадівського ЗЗСО відвідали зоопарк “Лімпопо”</p>
+        </a>
+        <a href="#" class="d-flex flex-column justify-content-center">
+          <img src="img/news2.jpeg" alt="news" />
+          <p>Ярмарка квітів</p>
+        </a>
+        <a href="#" class="d-flex flex-column justify-content-center">
+          <img src="img/news3.jpeg" alt="news" />
+          <p>Зустрічай динозаврів</p>
+        </a>
+        <a href="#" class="d-flex flex-column justify-content-center">
+          <img src="img/news1.png" alt="news" />
+          <p>Учні 2-3 класів Розвадівського ЗЗСО відвідали зоопарк “Лімпопо”</p>
+        </a>
+        <a href="#" class="d-flex flex-column justify-content-center">
+          <img src="img/news2.jpeg" alt="news" />
+          <p>Ярмарка квітів</p>
+        </a>
+        <a href="#" class="d-flex flex-column justify-content-center">
+          <img src="img/news3.jpeg" alt="news" />
+          <p>Зустрічай динозаврів</p>
+        </a>
       </div>
     </div>
   </section>

@@ -5,20 +5,19 @@ body {
 .bg {
   position: relative;
   max-width: 100vw;
-
   &__img_hero {
     position: absolute;
     background-image: url(../../img/hero-background.png);
     background-size: cover;
-    width: 100vw;
+    width: 100%;
     min-height: 1100px;
     top: 0;
     left: 0;
-    z-index: -2;
+    z-index: -1;
   }
   &__img_branch {
     position: absolute;
-    background-image: url(../../img/section-branch.svg);
+    background-image: url(../../img/section-branch.png);
     width: 100%;
     height: 186px;
     top: 1600px;
@@ -122,10 +121,8 @@ body {
       line-height: 1.1;
       padding: 14px 44px;
       background: linear-gradient(90deg, #f46141 2.43%, #f29e2b 100%);
-
       border-radius: 42px;
       border: none;
-
       &:hover {
         font-weight: 900;
       }
@@ -139,8 +136,8 @@ body {
       a {
         text-decoration: none;
         img {
-          max-width: 136px;
-          max-height: 136px;
+          width: 90%;
+          height: 136px;
           border-radius: 32px 56px 32px 64px;
         }
         p {
@@ -173,7 +170,6 @@ body {
   }
   &__animals {
     position: absolute;
-
     left: 52%;
     top: 160px;
     width: 788px;
@@ -196,7 +192,6 @@ body {
     }
     .palms {
       position: absolute;
-
       width: 700px;
       height: 700px;
       border-radius: 50%;
@@ -248,7 +243,6 @@ body {
       left: 49%;
       top: 3%;
     }
-
     .monkey {
       position: absolute;
       left: 45%;
@@ -273,7 +267,6 @@ body {
   }
   &__item {
     padding: 32px 16px;
-
     text-decoration: none;
     color: #ffffff;
     border-radius: 18px;
@@ -320,6 +313,7 @@ body {
   }
   &__nav {
     a {
+      display: flex;
       text-decoration: none;
       font-weight: 700;
       font-size: 16px;
@@ -327,8 +321,11 @@ body {
       text-align: center;
       text-transform: uppercase;
       color: #f8d548;
-      img {
+      height: 36px;
+      padding-top: 8px;
+      svg {
         margin-left: 12px;
+        width: 16px;
       }
     }
     &_tabs {
@@ -365,7 +362,6 @@ body {
   margin-top: 60px;
   .slick-arrow.control-c {
     position: absolute;
-
     bottom: -100px;
     right: 0;
     z-index: 2;
@@ -385,7 +381,6 @@ body {
       opacity: 1;
     }
   }
-
   .content {
     cursor: pointer;
     display: flex;
@@ -393,7 +388,6 @@ body {
     text-align: center;
     justify-content: center;
     padding: 20px;
-
     img {
       border-radius: 48px 96px;
       margin: 0 0 26px 0;
@@ -426,7 +420,7 @@ body {
     }
     &_shadow {
       position: absolute;
-      top: 250px;
+      top: 220px;
     }
     &_map {
       position: absolute;
@@ -460,13 +454,12 @@ body {
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    padding: 20px;
-
     img {
       border-radius: 48px 96px;
       margin: 0 0 26px 0;
-      max-height: 260px;
-      max-width: auto;
+      max-height: auto;
+      max-width: 100%;
+      height: 246px;
     }
     p {
       font-weight: 800;
@@ -478,7 +471,6 @@ body {
   }
   .slick-arrow.control-c {
     position: absolute;
-
     bottom: -100px;
     right: 0;
     z-index: 2;
