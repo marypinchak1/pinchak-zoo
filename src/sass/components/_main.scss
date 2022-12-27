@@ -23,6 +23,15 @@ body {
     height: 186px;
     top: 1600px;
     left: 0;
+    @media screen and(max-width:991px) {
+      top: 1940px;       
+    }
+    @media screen and(max-width:767px) {
+      top: 1970px;       
+    }
+    @media screen and(max-width:480px) {
+      top: 1680px;       
+    }
   }
   &__text {
     display: none;
@@ -61,6 +70,7 @@ body {
   overflow: hidden;
   max-width: 100%;
   height: 960px;
+
   &__gradient {
     position: absolute;
     width: 100%;
@@ -79,6 +89,9 @@ body {
   }
   &__main {
     padding-top: 280px;
+    @media screen and(max-width:575px) {
+      padding-top: 200px;        
+    }
   }
   &__info {
     &_place {
@@ -91,18 +104,30 @@ body {
         text-align: start;
         margin-left: 200px;
       }
+      @media screen and(max-width:575px) {
+        margin-left: 190px;  
+        font-size: 18px;
+      }
     }
     &_title {
       font-weight: 800;
       font-size: 72px;
       line-height: 1.2;
       margin-bottom: 20px;
+      @media screen and(max-width:575px) {
+        font-size: 68px;
+        line-height: 1.1;
+      }
     }
     &_opened {
       font-weight: 900;
       font-size: 24px;
       line-height: 1.5;
       margin-bottom: 4px;
+      @media screen and(max-width:575px) {
+        font-size: 22px;
+      line-height: 1.2;
+      }
     }
     &_adress {
       font-family: "Comfortaa";
@@ -112,6 +137,18 @@ body {
       margin-bottom: 48px;
       @media screen and(max-width:1608px) {
         margin-right: 50px;
+      }
+      @media screen and(max-width:1030px) {
+        margin-right: 80px;
+      }
+      @media screen and(max-width:575px) {
+        margin-bottom: 20px;
+      }
+    }
+    &_buttons{
+      @media screen and(max-width:575px) {
+        flex-direction: column;
+        width: 100%;
       }
     }
     &_button {
@@ -125,6 +162,9 @@ body {
       border-radius: 42px;
       border: none;
       transition: 0.8s;
+      @media screen and(max-width:1199px) {
+        padding: 14px 35px;
+      }
       &:hover {
         transform: scale(1.1);
         transition: 0.8s;
@@ -136,7 +176,9 @@ body {
     }
     &_slider {
       margin-top: 70px;
-
+      @media screen and(max-width:575px) {
+        margin-top: 20px;
+      }
       a {
         text-decoration: none;
         transition: 0.8s;
@@ -152,6 +194,15 @@ body {
           @media screen and(max-width:1400px) {
             height: 120px;
           }
+          @media screen and(max-width:1199px) {
+            height: 100px;
+          }
+          @media screen and(max-width:991px) {
+            height: 120px;
+          }
+          @media screen and(max-width:575px) {
+            height: 150px;
+          }
         }
         p {
           font-weight: 800;
@@ -166,6 +217,7 @@ body {
     &_animals {
       display: flex;
       justify-content: center;
+      text-align: center;
       align-items: center;
       margin-top: 80px;
       background: rgba(18, 131, 28, 0.89);
@@ -184,10 +236,25 @@ body {
         height: 120px;
         width: 110px;
       }
+      @media screen and(max-width:1199px) {
+        height: 100px;
+        width: 90px;
+      }
+      @media screen and(max-width:991px) {
+        width: 120px;
+        height: 120px;
+      }
+      @media screen and(max-width:575px) {
+        width: 90%;
+        height: 50px;
+        margin-top: 0;
+        margin-left: 5%;
+      }
       &:hover {
         transform: scale(1.1);
         transition: 0.8s;
         color: #ffffff;
+
       }
     }
   }
@@ -316,10 +383,12 @@ body {
     #0b7d16 100%
   );
   padding: 84px 0 150px 0;
+  @media screen and(max-width:575px) {
+    padding: 50px 0 100px 0;
+  }
   &__title {
-    font-weight: 800;
-    font-size: 72px;
-    margin-bottom: 60px;
+    @include title;
+    margin-bottom: 20px;
   }
   &__item {
     padding: 32px 16px;
@@ -328,6 +397,9 @@ body {
     border-radius: 18px;
     z-index: 1;
     transition: 1s;
+    @media screen and(max-width:480px) {
+      padding: 24px 12px;
+    }
     &:hover {
       background: linear-gradient(
         180deg,
@@ -345,6 +417,16 @@ body {
       transform: matrix(-1, 0, 0, 1, 0, 0);
       border-radius: 50%;
       margin-right: 50px;
+      @media screen and(max-width:480px) {
+        margin-right: 20px;
+        min-width: 100px;
+        min-height: 100px;
+      }
+      svg{
+        @media screen and(max-width:480px) {
+        max-width: 55%;
+        }
+      }
     }
     &_title {
       font-family: "Comfortaa";
@@ -352,11 +434,17 @@ body {
       font-size: 32px;
       line-height: 1.1;
       margin-bottom: 10px;
+      @media screen and(max-width:480px) {
+        font-size: 24px;
+      }
     }
     &_description {
       font-weight: 600;
       font-size: 18px;
       line-height: 1.3;
+      @media screen and(max-width:480px) {
+        font-size: 12px;
+      }
     }
   }
 }
@@ -365,9 +453,11 @@ body {
   color: #ffffff;
   background: #0b7d16;
   padding-bottom: 120px;
+  @media screen and(max-width:576px) {
+    padding-bottom: 100px;
+  }
   &__title {
-    font-weight: 800;
-    font-size: 72px;
+   @include title;
     margin-bottom: 24px;
   }
   &__nav {
@@ -382,6 +472,12 @@ body {
       color: #f8d548;
       height: 36px;
       padding-top: 8px;
+
+      transition: 0.8s;
+      &:hover {
+        transform: scale(1.1);
+        transition: 0.8s;
+      }
       svg {
         margin-left: 12px;
         width: 16px;
@@ -389,7 +485,9 @@ body {
     }
     &_tabs {
       gap: 24px;
-
+      @media screen and(max-width:767px) {
+        margin-bottom: 20px;
+      }
       .item {
         font-size: 18px;
         font-weight: 700;
@@ -401,6 +499,9 @@ body {
         vertical-align: middle;
         cursor: pointer;
         transition: 0.8s;
+        @media screen and(max-width:576px) {
+          margin-bottom: 12px;
+        }
         &:hover {
           background-color: #0a6113;
           color: #ffffff;
@@ -419,12 +520,20 @@ body {
   margin-bottom: 100px;
   position: relative;
   margin-top: 60px;
+  @media screen and(max-width:576px) {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
   .slick-arrow.control-c {
     position: absolute;
     bottom: -100px;
     right: 0;
     z-index: 2;
     cursor: pointer;
+    @media screen and(max-width:576px) {
+      bottom: -60px;
+    }
   }
   .arrow-prev.control-c {
     right: 140px;
@@ -479,33 +588,76 @@ body {
   font-family: "Raleway";
   color: #ffffff;
   position: relative;
+  max-width: 100%;
+  max-height: auto;
   &__title {
-    font-weight: 800;
-    font-size: 72px;
+    @include title;
     padding-bottom: 90px;
+    @media screen and(max-width:576px) {
+      padding-bottom: 70px;
+    }
   }
   &__img {
     padding-bottom: 100px;
+    max-width: 100%;
+    height: auto;
+    @media screen and(max-width:1199px) {
+      max-width: 70%;
+      height: auto;
+    }
+    @media screen and(max-width:576px) {
+      padding-bottom: 70px;
+    }
     &_globe {
       opacity: 0.1;
+      @media screen and(max-width:1199px) {
+        max-width: 90%;
+        height: auto;
+      }
     }
     &_shadow {
       position: absolute;
-      top: 220px;
+     
+      @media screen and(max-width:1199px) {
+        max-width: 50%;
+        height: auto;
+        bottom: 20%;
+      }
+      
+      @media screen and(max-width:575px) {
+        bottom: 26%;
+      }
+     
     }
     &_map {
       position: absolute;
+      @media screen and(max-width:1199px) {
+        max-width: 50%;
+        height: auto;
+        bottom: 26%;
+      }
+      @media screen and(max-width:575px) {
+        bottom: 32%;
+      }
     }
     &_cloud-up {
       position: absolute;
       left: 0;
       z-index: 1;
+      @media screen and(max-width:1199px) {
+        max-width: 30%;
+        height: auto;
+      }
     }
     &_cloud-down {
       position: absolute;
       right: 0;
       bottom: 100px;
       z-index: 1;
+      @media screen and(max-width:1199px) {
+        max-width: 30%;
+        height: auto;
+      }
     }
   }
 }
@@ -514,10 +666,13 @@ body {
   font-family: "Raleway";
   color: #ffffff;
   padding-bottom: 120px;
+ 
   &__title {
-    font-weight: 800;
-    font-size: 72px;
-    padding-bottom: 90px;
+    @include title;
+    padding-bottom: 90px; 
+    @media screen and(max-width:576px) {
+    padding-bottom: 60px;
+  }
   }
   &__slider {
     a {
@@ -555,6 +710,9 @@ body {
       right: 0;
       z-index: 2;
       cursor: pointer;
+      @media screen and(max-width:576px) {
+        bottom: -60px;
+      }
     }
     .arrow-prev.control-c {
       right: 140px;

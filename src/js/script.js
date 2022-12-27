@@ -7,6 +7,20 @@ let slider = $(document).ready(function () {
     infinite: true,
     autoplay: true,
     autoplaySpeed: 2500,
+    responsive: [
+      {
+        breakpoint: 688,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 450,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 
   $(".content__tabs").slick({
@@ -23,7 +37,13 @@ let slider = $(document).ready(function () {
       "<img class='a-right control-c next arrow-next' src='../img/white-arrow-right.svg'>",
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 868,
         settings: {
           slidesToShow: 2,
         },
@@ -31,11 +51,8 @@ let slider = $(document).ready(function () {
       {
         breakpoint: 576,
         settings: {
-          vertical: true,
-          verticalScrolling: true,
-          slidesToShow: 3,
-          speed: 1000,
-          arrows: false,
+            slidesToShow: 1,
+          centerMode: false,
         },
       },
     ],
@@ -56,6 +73,22 @@ let slider = $(document).ready(function () {
       "<img class='a-left control-c prev arrow-prev' src='../img/white-arrow-left.svg'>",
     nextArrow:
       "<img class='a-right control-c next arrow-next' src='../img/white-arrow-right.svg'>",
+    responsive: [
+      {
+        breakpoint: 980,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 676,
+        settings: {        
+          slidesToShow: 1,
+          centerMode: false,
+          centerPadding: "4px",
+        },
+      },
+    ],
   });
 });
 

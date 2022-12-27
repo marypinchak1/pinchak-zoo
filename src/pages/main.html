@@ -36,19 +36,21 @@
     <div class="hero__main">
       <div class="container">
         <div class="row">
-          <div class="col-6 hero__info p-0">
+          <div class="col-12 col-lg-6 hero__info ps-3 p-sm-0">
             <div class="hero__info_place">Меденичі</div>
             <div class="hero__info_title">Зоопарк Лімпопо</div>
             <div class="hero__info_opened">Відчинено 10:00 - 17:00</div>
             <div class="hero__info_adress">
               Львівська обл., Дрогобицький р-н, с. Меденичі, вул. Львівська 21,
             </div>
-            <div class="d-flex gap-4">
+            <div class="hero__info_buttons d-flex gap-4">
               <button class="hero__info_button primary">Як доїхати</button>
               <button id="tickets" class="hero__info_button">Квитки</button>
             </div>
-            <div class="col-12 d-flex">
-              <div class="hero__info_slider col-8 col-xxl-9">
+            <div class="col-12 d-block d-sm-flex">
+              <div
+                class="hero__info_slider col-12 col-sm-9 col-md-10 col-lg-8 col-xxl-9"
+              >
                 <a
                   href="#"
                   class="hero__info_slider_item d-flex flex-column justify-content-center"
@@ -92,11 +94,16 @@
                   <p>тигр</p>
                 </a>
               </div>
-              <a class="col-3 hero__info_animals" href="#"> Всі тварини </a>
+              <a
+                class="hero__info_animals col-12 col-sm-3 col-md-2 col-lg-3"
+                href="#"
+              >
+                Всі тварини
+              </a>
             </div>
           </div>
 
-          <div class="col-6 hero__animals">
+          <div class="d-none d-lg-block col-6 hero__animals">
             <img class="palms" src="img/palms.svg" alt="palms" />
             <img class="giraffe" src="img/hero_lama.png" alt="lama" />
             <img class="wolf" src="img/hero_wolf.png" alt="wolf" />
@@ -204,7 +211,7 @@
         <div class="col-12">
           <p class="animals__title">Тварини</p>
           <div class="animals__nav">
-            <div class="d-flex justify-content-between align-items-center">
+            <div class="d-md-flex justify-content-between align-items-center">
               <div class="animals__nav_tabs d-sm-flex">
                 <div class="item active">Усі</div>
                 <div id="tab-1" class="item" data-tabs="1">Хижаки</div>
@@ -250,21 +257,27 @@
       <div class="row">
         <div class="col-12">
           <h2 class="map__title">Карта зоопарку</h2>
-          <div class="map__img d-flex justify-content-center">
-            <img class="map__img_globe" src="img/globe.png" alt="globe" />
-            <img
-              class="map__img_shadow"
-              src="img/map_shadow.svg"
-              alt="shadow"
-            />
-            <img class="map__img_map" src="img/map.svg" alt="map" />
-            <img class="map__img_cloud-up" src="img/cloud-up.png" alt="cloud" />
+          <div class="d-flex justify-content-center">
+            <div class="map__img d-flex justify-content-center">
+              <img class="map__img_globe" src="img/globe.png" alt="globe" />
+              <img
+                class="map__img_shadow"
+                src="img/map_shadow.svg"
+                alt="shadow"
+              />
+              <img class="map__img_map" src="img/map.svg" alt="map" />
+              <img
+                class="map__img_cloud-up"
+                src="img/cloud-up.png"
+                alt="cloud"
+              />
 
-            <img
-              class="map__img_cloud-down"
-              src="img/cloud_down.png"
-              alt="cloud"
-            />
+              <img
+                class="map__img_cloud-down"
+                src="img/cloud_down.png"
+                alt="cloud"
+              />
+            </div>
           </div>
         </div>
       </div>
