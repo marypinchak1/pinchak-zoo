@@ -1,6 +1,7 @@
 body {
   width: 100%;
   height: max-content;
+  background-color: #0b7d16;
 }
 .bg {
   position: relative;
@@ -123,8 +124,10 @@ body {
       background: linear-gradient(90deg, #f46141 2.43%, #f29e2b 100%);
       border-radius: 42px;
       border: none;
+      transition: 0.8s;
       &:hover {
-        font-weight: 900;
+        transform: scale(1.1);
+        transition: 0.8s;
       }
       &.primary {
         background: transparent;
@@ -133,12 +136,22 @@ body {
     }
     &_slider {
       margin-top: 70px;
+
       a {
         text-decoration: none;
+        transition: 0.8s;
+        padding: 10px;
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.8s;
+        }
         img {
-          width: 90%;
+          width: 100%;
           height: 136px;
           border-radius: 32px 56px 32px 64px;
+          @media screen and(max-width:1400px) {
+            height: 120px;
+          }
         }
         p {
           font-weight: 800;
@@ -154,7 +167,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 70px;
+      margin-top: 80px;
       background: rgba(18, 131, 28, 0.89);
       border: 1px dashed rgba(255, 255, 255, 0.4);
       border-radius: 32px 56px 32px 64px;
@@ -166,6 +179,16 @@ body {
       line-height: 1.4;
       text-decoration-line: underline;
       text-transform: uppercase;
+      transition: 0.8s;
+      @media screen and(max-width:1400px) {
+        height: 120px;
+        width: 110px;
+      }
+      &:hover {
+        transform: scale(1.1);
+        transition: 0.8s;
+        color: #ffffff;
+      }
     }
   }
   &__animals {
@@ -190,6 +213,11 @@ body {
     @media screen and(max-width:1399px) {
       top: 240px;
     }
+    @media screen and(max-width:1240px) {
+      width: 560px;
+      height: 560px;
+      top: 300px;
+    }
     .palms {
       position: absolute;
       width: 700px;
@@ -203,6 +231,10 @@ body {
         width: 600px;
         height: 600px;
       }
+      @media screen and(max-width:1240px) {
+        width: 480px;
+        height: 480px;
+      }
     }
     .giraffe {
       position: absolute;
@@ -212,16 +244,26 @@ body {
         width: auto;
         max-height: 820px;
       }
+      @media screen and(max-width:1240px) {
+        height: 650px;
+      }
     }
     .wolf {
       position: absolute;
       left: -10%;
       bottom: 0;
+      @media screen and(max-width:1240px) {
+        height: 340px;
+        left: -10%;
+      }
     }
     .tiger {
       position: absolute;
       left: 8%;
       bottom: -8%;
+      @media screen and(max-width:1240px) {
+        height: 458px;
+      }
     }
     .griffon {
       position: absolute;
@@ -232,21 +274,35 @@ body {
         height: auto;
         top: 20px;
       }
+      @media screen and(max-width:1240px) {
+        max-width: 240px;
+      }
     }
     .lion {
       position: absolute;
       left: 5%;
       bottom: -3%;
+      @media screen and(max-width:1240px) {
+        height: 450px;
+      }
     }
     .monkey-shadow {
       position: absolute;
       left: 49%;
       top: 3%;
+      @media screen and(max-width:1240px) {
+        height: 196px;
+        width: auto;
+      }
     }
     .monkey {
       position: absolute;
       left: 45%;
       top: 1px;
+      @media screen and(max-width:1240px) {
+        height: 196px;
+        width: auto;
+      }
     }
   }
 }
@@ -270,6 +326,8 @@ body {
     text-decoration: none;
     color: #ffffff;
     border-radius: 18px;
+    z-index: 1;
+    transition: 1s;
     &:hover {
       background: linear-gradient(
         180deg,
@@ -278,6 +336,7 @@ body {
       );
       box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.05);
       color: #ffffff;
+      transition: 1s;
     }
     &_img {
       min-width: 143px;
@@ -370,15 +429,19 @@ body {
   .arrow-prev.control-c {
     right: 140px;
     opacity: 0.3;
+    transition: 0.8s;
     &:hover {
       opacity: 1;
+      transition: 0.8s;
     }
   }
   .arrow-next.control-c {
     right: 40px;
     opacity: 0.3;
+    transition: 0.8s;
     &:hover {
       opacity: 1;
+      transition: 0.8s;
     }
   }
   .content {
@@ -388,11 +451,19 @@ body {
     text-align: center;
     justify-content: center;
     padding: 20px;
+    width: 100%;
+    height: auto;
+    transition: 0.8s;
+    &:hover {
+      z-index: 10;
+      transform: scale(1.1);
+      transition: 0.8s;
+    }
     img {
       border-radius: 48px 96px;
       margin: 0 0 26px 0;
-      max-height: 260px;
-      max-width: auto;
+      height: 260px;
+      width: auto;
     }
     &__title {
       font-weight: 800;
@@ -446,48 +517,62 @@ body {
   &__title {
     font-weight: 800;
     font-size: 72px;
+    padding-bottom: 90px;
   }
-  a {
-    cursor: pointer;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    img {
-      border-radius: 48px 96px;
-      margin: 0 0 26px 0;
-      max-height: auto;
-      max-width: 100%;
-      height: 246px;
+  &__slider {
+    a {
+      cursor: pointer;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      padding: 18px;
+      transition: 0.8s;
+      &:hover {
+        z-index: 10;
+        transform: scale(1.1);
+        transition: 0.8s;
+      }
+      img {
+        border-radius: 48px 96px;
+        margin: 0 0 26px 0;
+        max-height: auto;
+        max-width: 100%;
+        height: 246px;
+      }
+      p {
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 2;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
     }
-    p {
-      font-weight: 800;
-      font-size: 18px;
-      line-height: 2;
-      text-transform: uppercase;
-      color: #ffffff;
+    .slick-arrow.control-c {
+      position: absolute;
+      bottom: -100px;
+      right: 0;
+      z-index: 2;
+      cursor: pointer;
     }
-  }
-  .slick-arrow.control-c {
-    position: absolute;
-    bottom: -100px;
-    right: 0;
-    z-index: 2;
-    cursor: pointer;
-  }
-  .arrow-prev.control-c {
-    right: 140px;
-    opacity: 0.3;
-    &:hover {
-      opacity: 1;
+    .arrow-prev.control-c {
+      right: 140px;
+      opacity: 0.3;
+      transition: 0.8s;
+      &:hover {
+        opacity: 1;
+        transition: 0.8s;
+      }
     }
-  }
-  .arrow-next.control-c {
-    right: 40px;
-    opacity: 0.3;
-    &:hover {
-      opacity: 1;
+    .arrow-next.control-c {
+      right: 40px;
+      opacity: 0.3;
+      transition: 0.8s;
+      &:hover {
+        opacity: 1;
+        transition: 0.8s;
+      }
     }
   }
 }

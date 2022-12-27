@@ -1,4 +1,74 @@
-.footer{
-    background-color: black;
-    color: #fff;
+.footer {
+  background-color: #0b7d16;
+  color: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  &__bg {
+    background-image: url(../../img/footer_grass.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+  }
+  &__logo {
+    z-index: 1;
+  }
+  &__nav {
+    z-index: 2;
+    ul {
+      li {
+        list-style: none;
+        padding: 8px 0;
+        transition: 0.8s;
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.8s;
+        }
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-weight: 800;
+          font-size: 24px;
+          line-height: 1.3;
+          padding: 4px;
+        }
+      }
+    }
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    > a {
+      text-decoration: none;
+      color: #fff;
+      font-family: "Comfortaa";
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      transition: 0.8s;
+      &:hover {
+        text-decoration: underline;
+        transition: 0.8s;
+      }
+    }
+    &_address {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    &_social-networks {
+      justify-content: end;
+      a {
+        transition: 0.8s;
+        &:hover {
+          transform: scale(1.2);
+          transition: 0.8s;
+        }
+      }
+    }
+  }
 }
