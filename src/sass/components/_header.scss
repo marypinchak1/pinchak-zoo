@@ -84,45 +84,64 @@
     justify-content: center;
     align-items: center;
     gap: 8px;
+    transition: 0.8s;
+    &:hover span {
+      background-color: #f36041;
+      border: 1px solid #f36041;
+      transition: 0.8s;
+    }
     span {
       border: 1px solid #ffffff;
       height: 3px;
       background-color: #ffffff;
       width: 32px;
+      transition: 0.8s;
     }
     &.active {
       position: relative;
       background-color: #ffffff;
+      transition: 0.8s;
       :first-child {
         background-color: #f36041;
-        transform: translateX(-50%) rotate(45deg);
+        transform: rotate(45deg);
         border: 1px solid #f36041;
-        bottom: calc(50% - 2px);
-        left: 50%;
         position: absolute;
+        transition: 0.8s;
+      }
+      :nth-child(2) {
+        display: none;
       }
       :last-child {
         background-color: #f36041;
-        transform: translateX(-50%) rotate(-45deg);
+        transform: rotate(-45deg);
         border: 1px solid #f36041;
-        bottom: calc(50% - 2px);
-        left: 50%;
         position: absolute;
+        transition: 0.8s;
       }
     }
   }
   &__burger_menu {
+    display: none;
     position: absolute;
-    background-image: url(../../img/hero-background.png);
+    background: url(../../img/hero-background.png);
     background-size: cover;
+    background-color: gray;
+    background-blend-mode: multiply;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     z-index: -1;
+    transition: 0.8s;
+    &.active {
+      display: block;
+      transition: 0.8s;
+      overflow: auto;
+    }
     nav {
       padding: 210px 0 0 30px;
       ul {
+       
         li {
           list-style: none;
           margin-bottom: 18px;
@@ -135,6 +154,9 @@
             font-size: 40px;
             line-height: 1.2;
             padding: 8px;
+            @media screen and(max-width:500px) {
+              font-size: 26px;
+            }
             &:hover {
               color: #f8d548;
             }
@@ -154,7 +176,7 @@
       font-size: 22px;
       transition: 0.5s;
       &:hover {
-        background-color: #f1c927;
+        background-color: #facb13;
         transition: 0.5s;
       }
       svg {
@@ -162,6 +184,7 @@
         height: 42px;
         z-index: 1;
         fill: black;
+        margin-right: 8px;
       }
     }
   }
