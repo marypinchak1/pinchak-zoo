@@ -59,7 +59,7 @@ let slider = $(document).ready(function () {
       {
         breakpoint: 576,
         settings: {
-            slidesToShow: 1,
+          slidesToShow: 1,
           centerMode: false,
         },
       },
@@ -90,7 +90,7 @@ let slider = $(document).ready(function () {
       },
       {
         breakpoint: 676,
-        settings: {        
+        settings: {
           slidesToShow: 1,
           centerMode: false,
           centerPadding: "4px",
@@ -107,4 +107,56 @@ $(".item").on("click", function () {
   $(".content").addClass("d-none");
   $(".content[data-tabs = " + tabs + "]").removeClass("d-none");
   $(".content[data-tabs = " + tabs + "]").addClass("d-block");
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".bg__text", {
+  scrollTrigger: {
+    toggleActions: "restart pause resume pause",
+    scrub: true,
+  },
+  x: -1500,
+});
+gsap.to("#branch", {
+  scrollTrigger: {
+    toggleActions: "restart pause resume pause",
+    scrub: true,
+  },
+  y: -600,
+});
+gsap.to("#hero-bg", {
+  scrollTrigger: {
+    toggleActions: "restart pause resume pause",
+    scrub: true,
+  },
+  y: 1000,
+});
+gsap.to(".map__img_cloud-down", {
+  x: -500,
+  scrollTrigger: {   
+    toggleActions: "restart pause resume pause",
+    scrub: true,
+    start: 2000,
+  },
+  
+});
+gsap.to(".map__img_cloud-up", {
+  scrollTrigger: {
+    toggleActions: "restart pause resume pause",
+    scrub: true,
+    start: 2000,
+  },
+  x: 500,
+});
+gsap.to(".map__img, .map__img_shadow", {
+  scrollTrigger: {
+    toggleActions: "restart pause resume pause",
+    scrub: true,
+    start: 2000,
+     },
+ 
+});
+gsap.to(".header__burger_menu",{
+
 });
