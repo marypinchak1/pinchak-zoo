@@ -1,3 +1,11 @@
+$(".header__burger").on("click", function () {
+  $(".header__burger").toggleClass("active");
+  $(".header__burger_menu").toggleClass("active");
+});
+$(".header__burger_menu a").on("click", function () {
+  $(".header__burger_menu").removeClass("active");
+  $(".header__burger").removeClass("active");
+});
 let slider = $(document).ready(function () {
   $(".hero__info_slider").slick({
     slidesToShow: 3,
@@ -99,76 +107,4 @@ $(".item").on("click", function () {
   $(".content").addClass("d-none");
   $(".content[data-tabs = " + tabs + "]").removeClass("d-none");
   $(".content[data-tabs = " + tabs + "]").addClass("d-block");
-});
-
-function parallax() {
-  var windowPosition = $(window).scrollTop();
-  var windowHeight = $(window).height();
-  $(".bg").each(function () {
-    var elementImage = $(this).find("img");
-    var imageHeight = elementImage.height();
-    var elementBottom = $(this).position().top + $(this).outerHeight(true);
-    scrollPercent =
-      (100 * (elementBottom - windowPosition)) / (windowHeight + imageHeight);
-    elementImage.css("object-position", "0% " + scrollPercent + "%");
-  });
-}
-
-$(document.body).on("touchmove", parallax);
-$(window).bind("scroll", parallax);
-let rellax = new Rellax(".rellax", {
-  breakpoints: [576, 768, 1201],
-});
-
-var hText = document.getElementById("h-text");
-var hTextNews = document.getElementById("h-text-2");
-var hTextMap = document.getElementById("h-text-map");
-(function () {
-  var throttle = function (type, name, obj) {
-    var obj = obj || window;
-    var running = false;
-    var func = function () {
-      if (running) {
-        return;
-      }
-      running = true;
-      requestAnimationFrame(function () {
-        obj.dispatchEvent(new CustomEvent(name));
-        running = false;
-      });
-    };
-    obj.addEventListener(type, func);
-  };
-
-  throttle("scroll", "optimizedScroll");
-})();
-
-window.addEventListener("optimizedScroll", function () {
-  hText.style.transform =
-    "translate3d(-" +
-    window.pageYOffset +
-    "px, " +
-    window.pageYOffset * 0 +
-    "px, " +
-    window.pageYOffset +
-    "px)";
-  try {
-    hTextNews.style.transform =
-      "translate3d(-" +
-      window.pageYOffset +
-      "px, " +
-      window.pageYOffset * 0 +
-      "px, " +
-      window.pageYOffset +
-      "px)";
-    hTextMap.style.transform =
-      "translate3d(-" +
-      window.pageYOffset +
-      "px, " +
-      window.pageYOffset * 0 +
-      "px, " +
-      window.pageYOffset +
-      "px)";
-  } catch (e) {}
-  // rightItem.style.transform = "rotate(" + window.pageYOffset + "deg)";
 });
