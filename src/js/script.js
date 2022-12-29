@@ -1,6 +1,20 @@
 $(".header__burger").on("click", function () {
   $(".header__burger").toggleClass("active");
   $(".header__burger_menu").toggleClass("active");
+  gsap.fromTo(
+    ".header__burger_menu",
+    {
+      scale: 2,
+    },
+    {
+      duration: 1,
+      scale: 1,
+    }
+  );
+  gsap.from(".header__burger_menu li", {
+    duration: 1,
+    x: -1000,
+  });
 });
 $(".header__burger_menu a").on("click", function () {
   $(".header__burger_menu").removeClass("active");
@@ -122,6 +136,7 @@ gsap.to("#branch", {
   scrollTrigger: {
     toggleActions: "restart pause resume pause",
     scrub: true,
+    start: 1000,
   },
   y: -600,
 });
@@ -132,20 +147,28 @@ gsap.to("#hero-bg", {
   },
   y: 1000,
 });
+gsap.to(".hero__gradient", {
+  scrollTrigger: {
+    toggleActions: "restart pause resume pause",
+    scrub: true,
+  },
+  y: 1000,
+});
 gsap.to(".map__img_cloud-down", {
   x: -500,
-  scrollTrigger: {   
+  scrollTrigger: {
     toggleActions: "restart pause resume pause",
     scrub: true,
     start: 2000,
   },
-  
 });
+
 gsap.to(".map__img_cloud-up", {
   scrollTrigger: {
     toggleActions: "restart pause resume pause",
     scrub: true,
     start: 2000,
+    rotation: 20,
   },
   x: 500,
 });
@@ -154,9 +177,7 @@ gsap.to(".map__img, .map__img_shadow", {
     toggleActions: "restart pause resume pause",
     scrub: true,
     start: 2000,
-     },
- 
-});
-gsap.to(".header__burger_menu",{
-
+    x: 20,
+    y: 20,
+  },
 });
