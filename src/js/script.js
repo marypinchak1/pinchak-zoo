@@ -4,7 +4,7 @@ $(".header__burger").on("click", function () {
   gsap.fromTo(
     ".header__burger_menu",
     {
-      scale: 2,
+      scale: 1.2,
     },
     {
       duration: 1,
